@@ -1,0 +1,4 @@
+image:
+  domain: docker.io
+  name: "bloomberg/goldpinger"
+  tag: "v3.0.0"

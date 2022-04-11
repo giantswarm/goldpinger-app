@@ -1,0 +1,9 @@
+apiVersion: v1
+name: goldpinger
+description: Tool to install network monitoring tool goldpinger.
+home: https://github.com/giantswarm/goldpinger
+version: [[ .Version ]]
+appVersion: [[ .AppVersion ]]
+annotations:
+  application.giantswarm.io/team: "sa"
+  config.giantswarm.io/version: 1.x.x
