@@ -1,0 +1,13 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: {{ include "resource.default.name" . }}
+spec:
+  podSelector:
+    matchLabels:
+      {{- include "labels.selector" . | nindent 6 }}
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            {{- include "labels.selector" . | nindent 12 }}
