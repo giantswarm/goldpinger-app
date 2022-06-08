@@ -16,7 +16,7 @@ workflows:
           chart: "goldpinger"
           filters:
             branches:
-              only: master
+              only: main
             tags:
               only: /^v.*/
 
@@ -30,4 +30,4 @@ workflows:
           chart: "goldpinger"
           filters:
             branches:
-              ignore: master
+              ignore: main
