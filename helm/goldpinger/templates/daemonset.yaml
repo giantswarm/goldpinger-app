@@ -47,10 +47,9 @@ spec:
             readOnlyRootFilesystem: true
           resources:
             limits:
-              cpu: 100m
               memory: 80Mi
             requests:
-              cpu: 10m
+              cpu: 1m
               memory: 40Mi
           ports:
             - containerPort: 8080

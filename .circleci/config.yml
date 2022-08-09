@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  architect: giantswarm/architect@4.15.0
+  architect: giantswarm/architect@4.24.0
 
 workflows:
   build:
@@ -15,19 +15,5 @@ workflows:
           app_catalog_test: "giantswarm-playground-test-catalog"
           chart: "goldpinger"
           filters:
-            branches:
-              only: main
             tags:
               only: /^v.*/
-
-      # Ensure that for every commit (branch other than master)
-      # there is an app version in the test catalog.
-      - architect/push-to-app-catalog:
-          context: architect
-          name: push-to-app-catalog-pr
-          app_catalog: "giantswarm-playground-catalog"
-          app_catalog_test: "giantswarm-playground-test-catalog"
-          chart: "goldpinger"
-          filters:
-            branches:
-              ignore: main
