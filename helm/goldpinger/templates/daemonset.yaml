@@ -12,6 +12,8 @@ spec:
     metadata:
       annotations:
         releaseRevision: {{ .Release.Revision | quote }}
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
       labels:
         {{- include "labels.common" . | nindent 8 }}
     spec:
@@ -47,10 +49,9 @@ spec:
             readOnlyRootFilesystem: true
           resources:
             limits:
-              cpu: 100m
               memory: 80Mi
             requests:
-              cpu: 10m
+              cpu: 1m
               memory: 40Mi
           ports:
             - containerPort: 8080
