@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/goldpinger/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/goldpinger/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/goldpinger-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/goldpinger-app/tree/main)
 
 # goldpinger
 
