@@ -12,8 +12,6 @@ spec:
     metadata:
       annotations:
         releaseRevision: {{ .Release.Revision | quote }}
-        prometheus.io/scrape: 'true'
-        prometheus.io/port: '8080'
       labels:
         {{- include "labels.common" . | nindent 8 }}
     spec:
