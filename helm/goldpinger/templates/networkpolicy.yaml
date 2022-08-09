@@ -7,7 +7,4 @@ spec:
     matchLabels:
       {{- include "labels.selector" . | nindent 6 }}
   ingress:
-    - from:
-      - podSelector:
-          matchLabels:
-            {{- include "labels.selector" . | nindent 12 }}
+    - {}
