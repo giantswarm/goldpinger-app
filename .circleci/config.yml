@@ -15,7 +15,5 @@ workflows:
           app_catalog_test: "giantswarm-playground-test-catalog"
           chart: "goldpinger"
           filters:
-            branches:
-              only: main
             tags:
               only: /^v.*/
