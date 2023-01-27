@@ -40,15 +40,23 @@ spec:
             - name: POD_IP
               valueFrom:
                 fieldRef:
-                  fieldPath: status.podIP 
+                  fieldPath: status.podIP
+            {{ if .Values.health_probes.dns_hosts }}
             - name: HOSTS_TO_RESOLVE
               value: "{{ .Values.health_probes.dns_hosts }}"
+            {{ end }}
             - name: DNS_TARGETS_TIMEOUT
               value: "{{ .Values.health_probes.dns_timeout }}"
+            {{ if .Values.health_probes.http_target }}
             - name: HTTP_TARGETS
               value: "{{ .Values.health_probes.http_target }}"
+            {{ end }}
+            - name: HTTP_TARGETS_TIMEOUT
+              value: "{{ .Values.health_probes.http_timeout }}"
+            {{ if .Values.health_probes.tcp_targets }}
             - name: TCP_TARGETS
               value: "{{ .Values.health_probes.tcp_targets }}"
+            {{ end }}
             - name: TCP_TARGETS_TIMEOUT
               value: "{{ .Values.health_probes.tcp_timeout }}"
           imagePullPolicy: Always

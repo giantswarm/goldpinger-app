@@ -5,7 +5,8 @@ image:
 
 health_probes:
   dns_hosts: "giantswarm.io"
-  dns_timeout: "500"
+  dns_timeout: "50ms"
   http_target: "https://giantswarm.io"
+  http_timeout: "500ms"
   tcp_targets: ""
-  tcp_timeout: "500"
+  tcp_timeout: "50ms"
