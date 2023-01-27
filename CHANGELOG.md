@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Allow all network traffic
+- Improve health values
+
 ## [3.7.0] - 2023-01-27
 
 - Allow custom health endpoints
