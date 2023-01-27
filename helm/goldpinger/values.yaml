@@ -1,4 +1,12 @@
 image:
   domain: docker.io
   name: "bloomberg/goldpinger"
-  tag: "v3.5.1"
+  tag: "v3.7.0"
+
+health_probes:
+  dns_hosts: "giantswarm.io"
+  dns_timeout: "50ms"
+  http_target: "https://giantswarm.io"
+  http_timeout: "500ms"
+  tcp_targets: ""
+  tcp_timeout: "50ms"

@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- Allow custom health endpoints
+- Update to latest release
+- Enable monitoring
+
 ## [3.5.1] - 2022-08-09
 
 - First release.
