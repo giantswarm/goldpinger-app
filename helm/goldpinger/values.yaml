@@ -4,9 +4,16 @@ image:
   tag: "v3.7.0"
 
 health_probes:
+  #set hostnames sepparated by space
   dns_hosts: "giantswarm.io"
   dns_timeout: "50ms"
+  #set urls sepparated by space
   http_target: "https://giantswarm.io"
   http_timeout: "500ms"
+  #set tcp sepparated by space. ex: 10.34.5.141:5000
   tcp_targets: ""
   tcp_timeout: "50ms"
+
+cluster:
+  kubernetes:
+    clusterDomain: cluster.local

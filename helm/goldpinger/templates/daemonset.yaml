@@ -41,10 +41,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
-            {{ if .Values.health_probes.dns_hosts }}
             - name: HOSTS_TO_RESOLVE
-              value: "{{ .Values.health_probes.dns_hosts }}"
-            {{ end }}
+              value: "kubernetes.default.svc.{{.Values.cluster.kubernetes.clusterDomain}}{{ if .Values.health_probes.dns_hosts }} {{ end }}{{ .Values.health_probes.dns_hosts }}"
             - name: DNS_TARGETS_TIMEOUT
               value: "{{ .Values.health_probes.dns_timeout }}"
             {{ if .Values.health_probes.http_target }}
