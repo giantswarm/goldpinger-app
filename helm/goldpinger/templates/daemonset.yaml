@@ -41,6 +41,16 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: status.podIP
+            - name: HOSTS_TO_RESOLVE
+              value: {{ .Values.health_probes.dns_hosts }}
+            - name: DNS_TARGETS_TIMEOUT
+              value: {{ .Values.health_probes.dns_timeout }}
+            - name: HTTP_TARGETS
+              value: {{ .Values.health_probes.http_target }}
+            - name: TCP_TARGETS
+              value: {{ .Values.health_probes.tcp_targets }}
+            - name: TCP_TARGETS_TIMEOUT
+              value: {{ .Values.health_probes.tcp_timeout }}
           imagePullPolicy: Always
           securityContext:
             allowPrivilegeEscalation: false
