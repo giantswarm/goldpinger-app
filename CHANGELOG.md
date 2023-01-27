@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.7.0] - 2023-01-27
+
 ## Changed
 
 - Allow custom health endpoints
@@ -18,5 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First release.
  
-[Unreleased]: https://github.com/giantswarm/goldpinger-app/compare/v3.5.1...HEAD
+[Unreleased]: https://github.com/giantswarm/goldpinger-app/compare/v3.7.0...HEAD
+[3.7.0]: https://github.com/giantswarm/goldpinger-app/compare/v3.5.1...v3.7.0
 [3.5.1]: https://github.com/giantswarm/goldpinger-app/releases/tag/v3.5.1
