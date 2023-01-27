@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: {{ include "resource.default.name" . }}
   annotations:
-    giantswarm.io/monitoring: "true"
-    prometheus.io/port: "8080"
+    giantswarm.io/monitoring-path: /metrics
+    giantswarm.io/monitoring-port: "8080"
+    giantswarm.io/monitoring-app-label: "goldpinger"
   labels:
+    giantswarm.io/monitoring: "true"
     app: {{ include "resource.default.name" . }}
 spec:
   ports:
